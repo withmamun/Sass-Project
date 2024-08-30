@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.5" height="15" viewBox="0 0 26.5 15">
+  <g id="News_Arrow" data-name="News Arrow" transform="translate(41.5 2907.5) rotate(180)">
+    <g id="Group_55" data-name="Group 55" transform="translate(2048 4424.5)">
+      <path id="ic_chevron_left_24px" d="M17.263,7.763,15.5,6,8,13.5,15.5,21l1.763-1.762L11.538,13.5Z" transform="translate(-2041 -1538)" fill="#003063"/>
+    </g>
+    <line id="Line_4" data-name="Line 4" x2="24" transform="translate(17.5 2900)" fill="none" stroke="#003063" stroke-width="3"/>
+  </g>
+</svg>

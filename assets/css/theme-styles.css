@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Mobile menu
+   ========================================================================== */
+.offcanvas-area {
+width: 100%;
+}
+
+.menu-close {
+   z-index: 5;
+}
+
+.academy__area::after {
+   z-index: -3;
+}
+
+@media only screen and (max-width: 640px) {
+      .preloader img {
+         max-width: 340px;
+      }
+}

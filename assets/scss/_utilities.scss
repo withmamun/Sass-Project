@@ -1,0 +1,10 @@
+.theme-btn {
+    @include theme-btn;
+    &:hover {
+        @include theme-btn--hover;
+    }
+    @include responsive(phone-sm) {
+        padding: 13px 22px;
+    }
+}
+ 

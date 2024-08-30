@@ -1,0 +1,113 @@
+
+// --------------------------------- REPORT AREA START ----------------------
+
+@include responsive(phone) {
+    .hero__news__wrap .container {
+        padding: 0 17px;
+    }
+}
+
+.report__area {
+    padding: 100px 0;
+
+    @include responsive(phone) {
+        padding: 50px 0;
+    }
+
+    .report__contnt__blk {
+        max-width: 700px;
+        margin: 0 auto;
+
+        .report__contnt {
+            .text-link {
+                margin-top: 15px;
+                display: inline-block;
+            }
+
+            span {
+                font-size: 14px;
+                color: $theme-color;
+                font-weight: 800;
+                display: flex;
+                align-items: center;
+                line-height: 18px;
+                margin-bottom: 15px;
+
+                i {
+                    margin-right: 5px;
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+    }
+
+    .report__viceo {
+        padding-top: 100px;
+
+        @include responsive(phone) {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+
+    }
+
+
+    .single__report__thumb {
+        padding-top: 100px;
+
+        @include responsive(phone) {
+            padding-top: 35px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .report__bottom__blk {
+        margin-top: 40px;
+
+        .single__report__item {
+            margin-top: 30px;
+
+            .report__news__text {
+                margin-top: 20px;
+
+                h5 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: $theme-color;
+                    font-weight: 800;
+                    display: flex;
+                    align-items: center;
+                    line-height: 18px;
+                    margin-bottom: 15px;
+
+                    i {
+                        margin-right: 5px;
+                        position: relative;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+
+        .report__news__thumb {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+
+// --------------------------------- REPORT AREA END ----------------------

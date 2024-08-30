@@ -1,0 +1,84 @@
+.news__area {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    .shape-4 {
+        left: 0;
+        bottom: 130px;
+        max-width: 97px;
+        z-index: -1;
+        @include responsive(desktop) {
+            bottom: 115px;
+            max-width: 70px;
+        }
+        @include responsive(phone-sm) {
+            bottom: 85px;
+            max-width: 60px;
+        }
+    }
+    .news__cards {
+        padding-top: 30px;
+        @include responsive(tab) {
+            padding-top: 24px;
+        }
+        .news__card {
+            margin-bottom: 30px;
+            position: relative;
+            @include responsive(phone-sm) {
+                max-width: 350px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            &__thumb {
+                height: 215px;
+                background: $dark;
+                overflow: hidden;
+                margin-bottom: 24px;
+                @include responsive(tab) {
+                    height: 170px;
+                    margin-bottom: 20px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                display: block;
+                color: $text-color;
+                transition: 0.3s;
+                @include responsive(tab) {
+                    font-size: 16px;
+                }
+                &:hover {
+                    color: $blue-color;
+                }
+            }
+        }
+    }
+}
+.contact-details {
+    font-size: 22px;
+    font-weight: 800;
+    color: #212427;
+    padding-top: 5px;
+    @include responsive(phone) {
+        font-size: 18px;
+    }
+    a {
+        text-decoration: none;
+        color: #212427;
+        display: flex;
+        align-items: center;
+        i {
+            margin-right: 10px;
+            color: #3476bc;
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+}
+ 

@@ -1,0 +1,363 @@
+/*=============== #StartRegion <<< [Header Section] =====================*/
+.header {
+    position: relative;
+    padding: 22px 0;
+    z-index: 2;
+    .container {
+        max-width: 1320px;
+        padding-top: 4px;
+        @include responsive(desktop-lg) {
+            max-width: 1170px;
+        }
+        @include responsive(desktop) {
+            max-width: 970px;
+        }
+        @include responsive(tab) {
+            max-width: 750px;
+        }
+        @include responsive(tab) {
+            max-width: 750px;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+    &__nav ul li a {
+        font-size: 14px;
+        color: $theme-color;
+        line-height: 1.1;
+        text-decoration: none;
+        font-weight: 800;
+        margin-right: 42px;
+        letter-spacing: 0.4px;
+        transition: 0.3s;
+        &:hover {
+            color: $blue-color;
+        }
+    }
+    &__btn {
+        .btn {
+            font-size: 14px;
+            color: $theme-color;
+            font-weight: 800;
+            width: 117px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            margin-right: 30px;
+            border-radius: 50px;
+            &.btn-bordered {
+                border: 1px solid $blue-color;
+                &:hover {
+                    background: $blue-color;
+                    color: $white;
+                }
+            }
+            &.btn-active {
+                background: $yellow-color;
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .language__selector {
+        padding-left: 53px;
+        border-left: 1px solid $blue-color;
+        margin-left: 20px;
+        .dropdown-toggle {
+            font-size: 14px;
+            font-weight: 800;
+            color: $theme-color;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            i {
+                margin-left: 6px;
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
+}
+
+.offcanvas-area {
+    &::after {
+        position: absolute;
+        content: "";
+        width: 94%;
+        height: 96%;
+        border: 1px solid #fff;
+        left: 3%;
+        top: 2%;
+        z-index: -1;
+    }
+    position: fixed;
+    left: -100%;
+    height: 100%;
+    width: 300px;
+    background: $theme-color;
+    z-index: 92;
+    padding-top: 40px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    visibility: hidden;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 50px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .offcanvas-menu {
+        padding: 0px 25px;
+    }
+    .menu-close {
+        font-size: 24px;
+        color: #fff;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        cursor: pointer;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        width: 35px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 35px;
+        &:hover {
+            background: $white;
+            color: $theme-color;
+        }
+    }
+    .main-menu {
+        ul {
+            li {
+                text-align: center;
+                padding: 6px 0;
+                margin-bottom: 13px;
+                a {
+                    font-size: 19px;
+                    color: $white;
+                    margin-bottom: 0;
+                    display: block;
+                    transition: 0.3s;
+                    font-weight: 600;
+                    &:hover {
+                        color: $yellow-color;
+                    }
+                }
+            }
+        }
+        .social__main__mb {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                font-size: 30px;
+                margin: 0px 15px;
+                width: 45px;
+                height: 45px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #003063;
+                border-radius: 50%;
+            }
+        }
+    }
+    &.active {
+        left: 0;
+        visibility: visible;
+    }
+}
+
+.offcanvas-menu {
+    .main-menu {
+        ul {
+            display: block;
+            padding-top: 0px;
+            padding-left: 0;
+            margin-bottom: 40px;
+            list-style: none;
+            border-bottom: 1px solid #fffbef;
+            padding-bottom: 15px;
+        }
+        .offcanvas-btn {
+            border-bottom: 1px solid #fffbef;
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+    }
+    .common-btn {
+        font-size: 17px;
+        padding: 9px 30px;
+        border-radius: 12px;
+    }
+}
+.offcanvas-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    z-index: 91;
+    &.active {
+        opacity: 0.4;
+        visibility: visible;
+    }
+}
+.menu-open {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    margin-left: 28px;
+    margin-right: 5px;
+    transition: 0.3s;
+    max-width: 30px;
+    @include responsive(tab) {
+        display: block;
+    }
+    font-size: 25px;
+    color: $theme-color;
+}
+
+// Responsive Code Starts
+
+@media only screen and (max-width: 1200px) {
+    .header .header__nav ul li a {
+        font-size: 13px;
+        margin-right: 22px;
+    }
+    .header .header-social {
+        margin-left: 30px;
+        margin-bottom: 15px;
+        padding: 5px 0;
+        padding-left: 10px;
+    }
+    .page-fxed-btn a {
+        max-width: 100px;
+    }
+    .header .language__selector {
+        padding-left: 32px;
+        margin-left: 10px;
+    }
+    .header__btn .btn {
+        width: 110px;
+        height: 40px;
+        margin-right: 18px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .header__right {
+        display: none !important;
+    }
+    .language__selector .dropdown-toggle {
+        font-size: 17px;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-weight: 500;
+    }
+    .language__selector .dropdown-toggle i {
+        margin-left: 8px;
+    }
+    .language__selector {
+        padding: 0 24px;
+        margin-top: 39px;
+        display: flex;
+    }
+    .offcanvas-btn .btn {
+        width: 160px;
+        height: 44px;
+        border-radius: 50px;
+        background: #fff;
+        margin-bottom: 12px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 13px;
+        font-size: 16px;
+        font-weight: 700;
+        transition: 0.3s;
+        &:hover,
+        &.active {
+            background: $yellow-color;
+        }
+    }
+}
+
+/*=============== #EndRegion <<< [Header Section] =====================*/
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 7rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #003063;
+    text-align: center;
+    list-style: none;
+    background-color: #fffbef;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 0.45rem;
+    box-shadow: 0px 9px 17px -5px rgba(0, 0, 0, 0.3);
+    transform: translate(-40px, 24px) !important;
+}
+
+.offcanvas-area .dropdown-toggle {
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.offcanvas-area .dropdown-toggle i {
+    margin-left: 8px;
+    position: relative;
+    top: -1px;
+}
+
+.offcanvas-area .dropdown-menu { 
+    left: -9px !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    max-width: 100px;
+    top: 26px !important;
+}

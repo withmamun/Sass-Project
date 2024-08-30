@@ -1,0 +1,75 @@
+.about__area {
+    padding: 90px 0;
+    .about__thumb {
+        margin-bottom: 50px;
+        @include responsive(tab) {
+            margin-bottom: 38px;
+        }
+    }
+
+    .about__content {
+        padding: 0 25px;
+        @include responsive(desktop) {
+            padding: 0 19px;
+        }
+        @include responsive(tab) {
+            padding: 0 1px;
+        }
+        @include responsive(phone) {
+            padding-top: 36px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 37px;
+            font-weight: 600;
+            @include responsive(desktop) {
+                font-size: 21px;
+                margin-bottom: 31px;
+            }
+            @include responsive(tab) {
+                font-size: 17px;
+                margin-bottom: 19px;
+            }
+            b {
+                font-weight: 800;
+            }
+            .text-link {
+                text-transform: uppercase;
+                line-height: 1.1;
+                color: $theme-color;
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 16px;
+                i {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+    .pizza-shape {
+        position: absolute;
+        right: 0px;
+        bottom: 30px;
+        z-index: -1;
+        @include responsive(tab) {
+            bottom: 40px;
+            max-width: 204px;
+        }
+        @include responsive(phone-sm) {
+            bottom: 20px;
+            max-width: 150px;
+        }
+    }
+    .circle-shape {
+        position: absolute;
+        left: 0px;
+        bottom: 30px;
+        z-index: -1;
+        display: none;
+        max-width: 65px;
+        @include responsive(phone) {
+            display: block;
+        }
+    }
+}

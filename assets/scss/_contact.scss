@@ -1,0 +1,91 @@
+.map {
+    height: 720px;
+    @include responsive(tab) {
+        height: 620px;
+    }
+    @include responsive(phone) {
+        height: 520px;
+    }
+    @include responsive(phone-sm) {
+        height: 400px;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.contact__area {
+    padding: 120px 0;
+    @include responsive(phone) {
+        padding: 80px 0;
+    }
+    .container {
+        max-width: 800px;
+        @include responsive(tab) {
+            max-width: 740px;
+        }
+    }
+    .contact__form {
+        max-width: 580px;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+    .form__input .form-control {
+        width: 100%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #3476bca6;
+        border-radius: 0 !important;
+        height: 45px;
+        margin-bottom: 21px;
+        color: #212427;
+        box-shadow: unset !important;
+    }
+    .form-control:focus {
+        border-width: 2px !important;
+        font-weight: 600;
+    }
+    .form__input {
+        textarea.form-control {
+            height: 140px;
+            resize: none;
+        }
+    }
+    h5 {
+        color: #212427;
+    }
+    .form__submit {
+        padding-top: 27px;
+        button {
+            width: 142px;
+            height: 40px;
+            border: 1px solid #3476bc;
+            color: #003063;
+            background: transparent;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 800;
+            transition: 0.3s;
+            &:hover {
+                background: #3476bc;
+                color: #fff;
+            }
+        }
+    }
+    .form-check {
+        label {
+            font-size: 18px;
+            color: #212427;
+            line-height: 1.2;
+        }
+        input {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #3476bc;
+            margin-right: 20px;
+            flex: 0 0 auto;
+        }
+    }
+}

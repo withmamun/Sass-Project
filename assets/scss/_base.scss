@@ -1,0 +1,203 @@
+/* Base CSS */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&family=Nunito:wght@800;900&display=swap");
+a:focus {
+    outline: 0 solid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-family: "Nunito", sans-serif;
+    color: $theme-color;
+}
+
+body {
+    color: $text-color;
+    font-weight: 400;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    background: $light-bg;
+    @include responsive(phone-sm) {
+        font-size: 15px;
+    }
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 08px;
+        left: 0%;
+        right: 0;
+        margin: 0 auto;
+        width: calc(100% - 16px);
+        height: 700px;
+        border: 1px solid $blue-color;
+        content: "";
+        z-index: -1;
+        @include responsive(desktop) {
+            height: 580px;
+        }
+        @include responsive(tab) {
+            height: 475px;
+        }
+        @include responsive(phone) {
+            height: 400px;
+        }
+        @include responsive(phone-sm) {
+            height: 300px;
+        }
+    }
+    &.after-lg::after {
+        @include responsive(phone) {
+            height: 600px;
+        }
+    }
+}
+.no-after::after {
+    display: none;
+}
+
+.no-dots .owl-dots {
+    display: none !important;
+}
+
+::-webkit-input-placeholder {
+    opacity: 1;
+    color: #fff;
+}
+::-moz-placeholder {
+    opacity: 1;
+    color: #fff;
+}
+:-ms-input-placeholder {
+    opacity: 1;
+    color: #fff;
+}
+::-ms-input-placeholder {
+    opacity: 1;
+    color: #fff;
+}
+::placeholder {
+    opacity: 1;
+    color: #fff;
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+a,
+a * {
+    @include transition(all 0.3s);
+    text-decoration: none !important;
+}
+
+.center {
+    margin: 0 auto;
+}
+.container {
+    @include responsive(phone-sm) {
+        padding: 0 17px;
+    }
+}
+::-webkit-input-placeholder {
+    opacity: 1;
+}
+::-moz-placeholder {
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    opacity: 1;
+}
+::-ms-input-placeholder {
+    opacity: 1;
+}
+::placeholder {
+    opacity: 1;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+}
+
+.pt-75 {
+    padding-top: 75px;
+    @include responsive(tab) {
+        padding-top: 55px;
+    }
+}
+
+.pb-65 {
+    padding-bottom: 65px;
+    @include responsive(tab) {
+        padding-bottom: 55px;
+    }
+}
+
+.pt-150 {
+    padding-top: 150px !important;
+}
+
+.mw-372 {
+    max-width: 372px;
+}
+
+.index-1 {
+    z-index: 1;
+}
+
+.index--1 {
+    z-index: -1;
+}
+
+nav {
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: #fffbf0     ;
+}
+.preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+}

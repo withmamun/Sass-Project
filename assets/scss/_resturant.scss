@@ -1,0 +1,144 @@
+.resturant__area {
+    padding-top: 120px;
+    &.two {
+        padding-bottom: 200px;
+        @include responsive(tab) {
+            padding-bottom: 120px;
+        }
+        @include responsive(phone) {
+            padding-bottom: 70px;
+        }
+    }
+    @include responsive(phone) {
+        padding-top: 140px;
+    }
+    .resturant__cards {
+        padding-top: 35px;
+        @include responsive(tab) {
+            padding-top: 28px;
+        }
+        @include responsive(phone-sm) {
+            padding-top: 14px;
+        }
+    }
+    .shape-1 {
+        right: 0;
+        top: 54px;
+        z-index: -1;
+        max-width: 302px;
+        @include responsive(desktop) {
+            max-width: 205px;
+        }
+        @include responsive(phone) {
+            max-width: 105px;
+            top: 10px;
+        }
+    }
+    .shape-2 {
+        left: 0;
+        bottom: 180px;
+        z-index: -1;
+        max-width: 260px;
+        @include responsive(desktop) {
+            max-width: 160px;
+        }
+        @include responsive(phone) {
+            max-width: 80px;
+            top: 60px;
+        }
+    }
+    .shape-3 {
+        right: 0;
+        bottom: -95px;
+        z-index: -1;
+        max-width: 400px;
+        @include responsive(desktop) {
+            bottom: -80px;
+            max-width: 300px;
+        }
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+}
+
+.resturant__card {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    &__thumb {
+        height: 350px;
+        width: 100%;
+        overflow: hidden;
+        @include responsive(tab) {
+            height: 270px;
+        }
+        @include responsive(phone-sm) {
+            height: 260px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__body {
+        padding-top: 31px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        @include responsive(phone-sm) {
+            padding-top: 20px;
+            padding-right: 12px;
+            padding-bottom: 12px;
+        }
+        a {
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: 800;
+            line-height: 1.4;
+            color: $text-color;
+            display: block;
+            margin-bottom: 11px;
+            @include responsive(tab) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            @include responsive(phone-sm) {
+                font-size: 19px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.tomato-3 {
+    position: absolute;
+    left: 0;
+    top: 240px;
+    z-index: -1;
+    @include responsive(phone) {
+        top: 21px;
+        max-width: 115px;
+    }
+    img {
+        position: relative;
+        left: -30px;
+    }
+}
+
+.res-shape {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    z-index: -1;
+    max-width: 517px;
+    @include responsive(desktop) {
+        max-width: 455px;
+    }
+    @include responsive(tab) {
+        max-width: 370px;
+        bottom: 130px;
+    }
+    @include responsive(phone) {
+        display: none;
+    }
+}

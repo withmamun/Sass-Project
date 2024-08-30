@@ -1,0 +1,95 @@
+.academy__area {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 140px;
+    padding-top: 100px;
+    @include responsive(tab) {
+        padding-bottom: 110px;
+        padding-top: 74px;
+    }
+    .flower-icon {
+        position: absolute;
+        top: -24px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 1;
+        max-width: 48px;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: calc(100% - 16px);
+        margin: 0 auto;
+        height: 910px;
+        border: 1px solid $blue-color;
+        content: "";
+        z-index: -1;
+        background: url(../img/bg-1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include responsive(desktop) {
+            height: 830px;
+        }
+        @include responsive(tab) {
+            height: 660px;
+        }
+        @include responsive(phone) {
+            height: 560px;
+        }
+    }
+    &.two::after {
+        @include responsive(phone) {
+            height: calc(100% - 300px);
+        }
+    }
+    .academy__title {
+        max-width: 560px;
+        margin: 0 auto;
+        @include responsive(phone-sm) {
+            padding: 0 9px;
+        }
+        p {
+            line-height: 1.58;
+            padding-top: 8px;
+            padding-bottom: 5px;
+        }
+    }
+    .academy__thumb {
+        margin-top: 95px;
+        @include responsive(desktop) {
+            margin-top: 60px;
+        }
+    }
+}
+.pizza__shape {
+    position: absolute;
+    top: 155px;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+    @include responsive(desktop) {
+        max-width: 595px;
+    }
+    @include responsive(tab) {
+        max-width: 436px;
+    }
+    @include responsive(phone) {
+        max-width: 100%;
+        position: relative;
+        top: -35px;
+        text-align: center;
+        z-index: 1;
+    }
+    img {
+        position: relative;
+        right: -100px;
+        @include responsive(phone) {
+            right: 0;
+            transform: scaleX(1.03);
+        }
+    }
+}
